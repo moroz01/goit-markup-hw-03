@@ -22,6 +22,7 @@ html {
   --primary-white-color: #ffffff;
   --secondary-bg-color: #2f303a;
   --third-bg-color: #f5f4fa;
+  --header-border-color: #ececec;
 }
 
 /* body */
@@ -44,12 +45,39 @@ body {
 .works-list,
 .team-list,
 .projects-list,
-.buttons {
+.buttons,
+p {
+  padding: 0;
+  margin: 0;
   list-style: none;
+}
+
+/* Container */
+.container {
+  outline: 2px solid tomato;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+
+  width: 1200px;
+}
+
+/* Header */
+.page-header {
+  outline: 2px solid tomato;
+  border-bottom: 1px solid var(--header-border-color);
+}
+
+.main-nav {
+  display: flex;
+  align-items: center;
 }
 
 /* logo */
 .logo {
+  margin-right: 93px;
+
   color: var(--title-text-color);
   font-family: Raleway, sans-serif;
   font-weight: 700;
@@ -72,17 +100,35 @@ body {
 }
 
 /* site-nav */
-
-.container {
-  outline: 2px solid tomato;
-  width: 1600px;
-  margin-left: auto;
-  margin-right: auto;
+.site-nav {
+  display: flex;
 }
 
-.site-nav-link {
-  color: var(--title-text-color);
+.site-nav-item {
+  outline: 2px solid red;
+}
 
+.site-nav .site-nav-item + .site-nav-item {
+  margin-left: 50px;
+}
+
+.auth-nav {
+  outline: 2px solid tomato;
+  display: flex;
+  margin-left: auto;
+}
+
+.auth-nav .auth-nav-item + .auth-nav-item {
+  margin-left: 50px;
+}
+
+.site-nav-link,
+.site-nav-link-current {
+  display: block;
+  padding-top: 5px;
+  padding-bottom: 5px;
+
+  color: var(--title-text-color);
   font-style: normal;
   font-weight: 500;
   font-size: 14px;
@@ -92,14 +138,21 @@ body {
 }
 
 .auth-nav-link {
-  color: var(--primary-text-color);
+  display: block;
+  padding-top: 5px;
+  padding-bottom: 5px;
 
+  color: var(--primary-text-color);
   font-style: normal;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
   text-decoration: none;
+}
+
+.auth-nav-item {
+  outline: 2px solid tomato;
 }
 
 .site-nav-link:hover,
@@ -123,21 +176,53 @@ body {
 
 /* hero */
 .hero {
+  padding-top: 200px;
+  padding-bottom: 200px;
+  margin-bottom: 94px;
+
   background-color: var(--secondary-bg-color);
+  text-align: center;
 }
 
 .hero-title {
+  margin-top: 0;
+  margin-bottom: 30px;
   color: var(--primary-white-color);
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
-  text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
 }
 
+/* button primary */
+
+.button-primary {
+  display: inline-block;
+  min-width: 200px;
+  border-radius: 4px;
+  padding: 10px 32px;
+  text-align: center;
+
+  color: var(--primary-white-color);
+  background-color: var(--accent-color);
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
+}
+
+.button-primary:hover,
+.button-primary:focus {
+  color: var(--accent-color);
+  background-color: var(--primary-white-color);
+}
+
 /* section-title */
 .section-title {
+  margin-top: 0;
+  margin-bottom: 50px;
   color: var(--title-text-color);
   font-weight: 700;
   font-size: 36px;
@@ -146,7 +231,33 @@ body {
 }
 
 /* feature-list */
+.section-features {
+  margin-bottom: 94px;
+}
+
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
+
+.feature-list {
+  display: flex;
+}
+
+.feature-list-item {
+  width: 270px;
+}
+
+.feature-list .feature-list-item + .feature-list-item {
+  margin-left: 30px;
+}
+
 .feature-list-title {
+  margin-top: 0;
+  margin-bottom: 10px;
   color: var(--title-text-color);
   font-weight: 700;
   font-size: 14px;
@@ -158,32 +269,29 @@ body {
 .feature-list-text {
   font-size: 14px;
   line-height: 1.71;
+  margin: 0;
 }
 
-/* button primary */
-.button-primary {
-  color: var(--primary-white-color);
-  background-color: var(--accent-color);
-  font-family: inherit;
-
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.87;
-  letter-spacing: 0.06em;
-  border-radius: 4px;
-  padding: 10px 32px;
-  display: inline-block;
+/* Works section */
+.section-works {
+  margin-bottom: 94px;
 }
 
-.button-primary:hover,
-.button-primary:focus {
-  color: var(--accent-color);
-  background-color: var(--primary-white-color);
+.works-list {
+  display: flex;
+}
+
+.works-list .works-list-item + .works-list-item {
+  margin-left: 30px;
 }
 
 /* team section */
-.team {
+.section-team {
   background-color: var(--third-bg-color);
+}
+
+.team-list {
+  display: flex;
 }
 
 .team-list-title {
