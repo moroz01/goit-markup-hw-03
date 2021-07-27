@@ -68,7 +68,6 @@ img {
 
 /* Container */
 .container {
-  outline: 2px solid tomato;
   padding-left: 15px;
   padding-right: 15px;
   margin-left: auto;
@@ -79,7 +78,6 @@ img {
 
 /* Header */
 .page-header {
-  outline: 2px solid tomato;
   border-bottom: 1px solid var(--header-border-color);
 }
 
@@ -113,10 +111,6 @@ img {
   margin-bottom: 32px;
 }
 
-.site-nav-item {
-  outline: 2px solid red;
-}
-
 .site-nav .site-nav-item + .site-nav-item {
   margin-left: 50px;
 }
@@ -124,8 +118,6 @@ img {
 .auth-nav {
   margin-top: 32px;
   margin-bottom: 32px;
-
-  outline: 2px solid tomato;
   display: flex;
   margin-left: auto;
 }
@@ -161,10 +153,6 @@ img {
   line-height: 1.14;
   letter-spacing: 0.02em;
   text-decoration: none;
-}
-
-.auth-nav-item {
-  outline: 2px solid tomato;
 }
 
 .site-nav-link:hover,
@@ -246,7 +234,6 @@ img {
 .section {
   padding-top: 94px;
   padding-bottom: 94px;
-  outline: 2px solid greenyellow;
 }
 
 .visually-hidden {
@@ -284,6 +271,12 @@ img {
   font-size: 14px;
   line-height: 1.71;
   margin: 0;
+}
+
+/* Our Works */
+
+.works-our {
+  padding-top: 0;
 }
 
 .works-list {
@@ -435,8 +428,4 @@ img {
 .projects-list-text {
   font-size: 16px;
   line-height: 1.87;
-}
-
-.projects-list-item {
-  outline: 2px solid red;
 }
