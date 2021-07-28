@@ -76,9 +76,14 @@ img {
   width: 1200px;
 }
 
+.header-item {
+  display: flex;
+}
+
 /* Header */
 .page-header {
   border-bottom: 1px solid var(--header-border-color);
+  display: flex;
 }
 
 .main-nav {
@@ -116,10 +121,12 @@ img {
 }
 
 .auth-nav {
-  margin-top: 32px;
-  margin-bottom: 32px;
+  align-items: center;
   display: flex;
   margin-left: auto;
+
+  margin-top: 32px;
+  margin-bottom: 32px;
 }
 
 .auth-nav .auth-nav-item + .auth-nav-item {
@@ -366,12 +373,11 @@ img {
 .buttons {
   display: flex;
   justify-content: center;
-  padding-bottom: 16px;
-  margin-bottom: 34px;
+  margin-bottom: 50px;
 }
 
 .buttons .buttons-item + .buttons-item {
-  margin-left: 30px;
+  margin-left: 8px;
 }
 
 /* buttons secondary */
